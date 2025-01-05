@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" />
+    <script src="../../plugin/helpers.js"></script>
+    <script>
+      function test(str) {
+        console.log(str);
+      }
+
+      const handler = myPlugin.throttle(test, 2000, false);
+
+      const inp = document.querySelector("input");
+      inp.addEventListener("input", function () {
+        handler(inp.value);
+      });
+    </script>
+  </body>
+</html>
