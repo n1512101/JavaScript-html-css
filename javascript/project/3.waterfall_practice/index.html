@@ -4,9 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      .container {
+        margin: 10px;
+        border: 1px solid #ccc;
+        padding: 5px;
+        overflow: hidden;
+      }
+    </style>
   </head>
   <body>
-    <div class="container"></div>
+    <div class="container clearfix"></div>
+    <script src="../../plugin/helpers.js"></script>
     <script src="../../plugin/waterfall.js"></script>
     <script>
       const srcs = [];
@@ -15,8 +24,7 @@
       }
 
       myPlugin.createWaterFall({
-        minHGap: 10, // 水平方向の最小gap
-        minVGap: 15, // 垂直方向の最小gap
+        minHGap: 10, // 画像間gap
         imgSrcs: srcs, // 画像のパス
         imgWidth: 220, // 画像の横幅
         container: document.querySelector(".container"), // 画像を入れるDOM
