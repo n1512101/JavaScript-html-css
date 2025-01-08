@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .item {
+        width: 100px;
+        height: 100px;
+        background-color: rgb(0, 0, 0);
+        position: absolute;
+        left: 100px;
+        top: 100px;
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="item"></div>
+    <button class="start">start</button>
+    <button class="stop">stop</button>
+    <script src="../../plugin/helpers.js"></script>
+    <script src="../../plugin/animate.js"></script>
+    <script>
+      const item = document.querySelector(".item");
+      const startBtn = document.querySelector(".start");
+      const stopBtn = document.querySelector(".stop");
+      const animate = new myPlugin.Animate({
+        duration: 30,
+        total: 5000,
+        begin: {
+          left: 100,
+          top: 100,
+          r: 0,
+          g: 0,
+          b: 0,
+        },
+        end: {
+          left: 1000,
+          top: 800,
+          r: 200,
+          g: 200,
+          b: 200,
+        },
+        onstart: function () {
+          console.log("start!");
+        },
+        onmove: function () {
+          item.style.left = this.currentData.left + "px";
+          item.style.top = this.currentData.top + "px";
+          item.style.backgroundColor = `rgb(${this.currentData.r}, ${this.currentData.g}, ${this.currentData.b})`;
+        },
+        onover: function () {
+          console.log("over!");
+        },
+      });
+
+      startBtn.addEventListener("click", function () {
+        animate.start();
+      });
+      stopBtn.addEventListener("click", function () {
+        animate.stop();
+      });
+    </script>
+  </body>
+</html>

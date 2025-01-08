@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        background-color: #b3effe;
+        height: 50px;
+        padding: 10px 20px;
+        box-sizing: border-box;
+      }
+      .left {
+        float: left;
+        height: 30px;
+        line-height: 30px;
+      }
+      .title::after {
+        content: "|";
+        margin-left: 20px;
+        font-size: 27px;
+        vertical-align: -2px;
+        color: #ccc;
+      }
+      .left ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        margin-left: 20px;
+        height: 30px;
+        overflow: hidden;
+      }
+      .left ul li {
+        height: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="left title">お知らせ</div>
+      <div class="left">
+        <ul>
+          <li>1. Lorem ipsum dolor sit.</li>
+          <li>2. Velit aspernatur officiis fugiat.</li>
+          <li>3. Repellendus neque rerum dolor!</li>
+          <li>4. Eveniet hic quisquam earum.</li>
+        </ul>
+      </div>
+    </div>
+    <script src="../../plugin/helpers.js"></script>
+    <script src="../../plugin/animate.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
