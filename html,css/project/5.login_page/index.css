@@ -1,0 +1,187 @@
+@import "../../common/reset.css";
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.form {
+  width: 980px;
+  margin: 1em auto;
+}
+.form h2 {
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+  height: 27px;
+  margin-bottom: 30px;
+}
+.form h2 span {
+  background-color: #fff;
+  padding: 0 20px;
+  font-size: 38px;
+}
+
+.form-area {
+  width: 432px;
+  margin: 0 auto;
+}
+.form-area .form-item {
+  margin: 50px 0;
+  position: relative;
+}
+.form .select .select-item, .form .select .input {
+  float: left;
+  height: 40px;
+}
+.form .select .select-item {
+  width: 140px;
+  border: 1px solid #dedede;
+  border-radius: 4px 0 0 4px;
+  box-sizing: border-box;
+  border-right: none;
+  position: relative;
+}
+.form .select .input {
+  width: 283px;
+}
+.form .select .input input {
+  border-radius: 0 4px 4px 0;
+}
+.form .select .select-item .title {
+  line-height: 40px;
+  padding: 0 20px;
+  color: #909399;
+  cursor: pointer;
+}
+.form .select .select-item ul {
+  display: none;
+  max-height: 256px;
+  background-color: #fff;
+  color: #606266;
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 50px;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #dedede;
+  border-radius: 4px;
+  padding: 10px 0;
+  font-size: 14px;
+  overflow-y: scroll;
+}
+.form .select .select-item ul li {
+  height: 34px;
+  padding: 0 20px;
+  cursor: pointer;
+  line-height: 34px;
+}
+.form .select .select-item ul li:hover {
+  background-color: #f5f7fa;
+}
+.form .select .select-item ul li.active {
+  color: #00a1d6;
+  font-weight: 600;
+}
+.form-area .form-item .btn-snscode {
+  width: 130px;
+  height: 36px;
+  position: absolute;
+  right: 2px;
+  top: 2px;
+}
+.form-area .form-item .error {
+  position: absolute;
+  width: 240px;
+  top: 10px;
+  right: -250px;
+  font-size: 12px;
+  color: #f45d89;
+  display: none;
+}
+.form-area .form-item.haserror .error {
+  display: block;
+}
+.form-area .form-item.haserror input {
+  border-color: #f45d89;
+}
+.form-area .readme {
+  margin: -30px 0;
+  font-size: 12px;
+}
+.form-area .readme .checkbox {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border: 1px solid #dcdfe6;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.form-area .readme input {
+  display: none;
+}
+.form-area .readme input:checked+.checkbox {
+  border-color: #00a1d6;
+}
+.form-area .readme input:checked+.checkbox::after {
+  content: "";
+  display: block;
+  width: 7px;
+  height: 7px;
+  background-color: #00a1d6;
+  border-radius: 2px;
+  margin: 2.5px 0 0 2.5px;
+}
+
+body {
+  line-height: 1.5;
+}
+input[type="text"], input[type="password"] {
+  outline: none;
+  border: 1px solid #dedede;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 4px;
+  height: 40px;
+  text-indent: 1em;
+  font-size: 14px;
+  color: #606266;
+}
+input[type="text"]:hover, input[type="password"]:hover {
+  border-color: #c0c4cc;
+}
+input[type="text"]::placeholder, input[type="password"]::placeholder {
+  color: #ccc;
+}
+input[type="text"]:focus, input[type="password"]:focus {
+  border-color: #00a1d6;
+}
+button {
+  height: 40px;
+  background-color: #00a1d6;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  border: none;
+}
+button:hover {
+  background-color: #33b4de;
+}
+button.fill {
+  width: 100%;
+  box-sizing: border-box;
+}
+button:disabled {
+  background-color: #f5f5f5;
+  color: rgba(0, 0, 0, .25);
+  border-color: 1px solid #d9d9d9;
+  box-sizing: border-box;
+  cursor: not-allowed;
+}
+.form a {
+  color: #00a1d6;
+}
+.txtright {
+  text-align: right;
+}

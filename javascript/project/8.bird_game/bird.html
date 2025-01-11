@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .game {
+        width: 800px;
+        height: 600px;
+        border: 2px solid;
+        margin: 0 auto;
+        position: relative;
+        overflow: hidden;
+      }
+      .game .sky {
+        height: 100%;
+        width: 200%;
+        background-image: url("img/sky.png");
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+      .game .land {
+        height: 112px;
+        width: 200%;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        background-image: url("img/land.png");
+      }
+      .game .bird {
+        width: 33px;
+        height: 26px;
+        position: absolute;
+        left: 150px;
+        top: 150px;
+        background-image: url("img/bird.png");
+        background-position: -8px -10px;
+      }
+      p {
+        text-align: center;
+      }
+      .pipe {
+        position: absolute;
+        width: 52px;
+      }
+      .up {
+        background-image: url("img/pipeDown.png");
+        background-repeat: no-repeat;
+        background-position: left bottom;
+      }
+      .down {
+        background-image: url("img/pipeUp.png");
+        background-repeat: no-repeat;
+      }
+      .game .over {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.3);
+        z-index: 9;
+        line-height: 600px;
+        text-align: center;
+        color: #fff;
+        font-size: 4em;
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="game">
+      <div class="sky"></div>
+      <div class="land"></div>
+      <div class="bird"></div>
+      <div class="over">Game Over</div>
+    </div>
+    <p>Press enter key to start or stop, space key to jump.</p>
+    <script src="bird.js"></script>
+  </body>
+</html>
