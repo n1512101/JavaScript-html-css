@@ -38,6 +38,7 @@ const game = {
     pairManager.produceTimer.start();
     pairManager.moveTimer.start();
     hitManager.timer.start();
+    score.timer.start();
     this.isPause = false;
   },
   stop: function () {
@@ -48,6 +49,7 @@ const game = {
     pairManager.produceTimer.stop();
     pairManager.moveTimer.stop();
     hitManager.timer.stop();
+    score.timer.stop();
     this.isPause = true;
   }
 }
@@ -175,6 +177,7 @@ function PipePair() {
   this.down = new Pipe("down", land.top - height - gap);
   this.left = game.width;
 }
+PipePair.isPassed = false; // birdがすでにこのpipeを通過しているかどうか
 /**
  * 1ペアのパイプのleftを変更する
  */
@@ -254,6 +257,23 @@ hitManager.timer = getTimer(16, hitManager, function () {
     game.isOver = true;
   }
 });
+
+// スコアのオブジェクト
+const score = {
+  number: 0,
+  dom: document.querySelector('.game .score span'),
+}
+// スコア更新タイマー
+score.timer = getTimer(16, score, function () {
+  // 1ペアのパイプが通りすぎるとスコアを1足す
+  for (let pair of pairManager.pairs) {
+    if (bird.left >= (pair.left + Pipe.width) && (!pair.isPassed)) {
+      this.number++;
+      this.dom.innerText = this.number;
+      pair.isPassed = true;
+    }
+  }
+})
 
 // イベント定義
 window.onkeydown = function (e) {

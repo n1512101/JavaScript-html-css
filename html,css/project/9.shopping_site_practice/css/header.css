@@ -1,0 +1,124 @@
+.header {
+  height: 100px;
+  position: relative;
+}
+.header-logo h1 {
+  display: none;
+}
+.header-logo {
+  background-image: url("../img/logo.png");
+  width: 56px;
+  height: 56px;
+  background-size: 100% 100%;
+  margin-top: 22px;
+  margin-right: 172px;
+}
+.header-menu>a {
+  height: 100px;
+  line-height: 100px;
+  padding: 0 10px;
+  font-size: 16px;
+}
+.header-submenu {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  top: 100px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  padding: 30px 0;
+  z-index: 30;
+  background-color: #fff;
+  display: none;
+}
+.header-cover img {
+  width: 160px;
+  height: 110px;
+}
+.header-submenu a {
+  width: 204px;
+  text-align: center;
+  font-size: 12px;
+}
+.header-cover {
+  border-right: 1px solid #eee;
+}
+.header-submenu a:last-child .header-cover {
+  border-right: none;
+}
+.header-name {
+  margin-top: 10px;
+  color: #333;
+}
+.header-price {
+  color: #ff6700;
+}
+.header-menu:hover .header-submenu {
+  display: block;
+}
+.header-search {
+  margin-top: 25px;
+  position: relative;
+}
+.header-search input {
+  width: 245px;
+  height: 50px;
+  font-size: 16px;
+  padding: 0 15px;
+  outline: none;
+  border: 1px solid #ccc;
+}
+.header-search .header-searchicon {
+  width: 55px;
+  height: 50px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  color: #777;
+  border-left: none;
+  cursor: pointer;
+}
+.header-search .header-searchicon .iconfont {
+  font-size: 20px;
+}
+.header-search .header-suggest {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 245px;
+  border: 1px solid #ff6700;
+  border-top: none;
+  z-index: 40;
+  background-color: #fff;
+  display: none;
+}
+.header-search .header-suggest a {
+  display: block;
+  height: 30px;
+  line-height: 30px;
+  font-size: 12px;
+  padding: 0 10px;
+}
+.header-search .header-suggest a:hover {
+  background-color: #eee;
+  color: inherit;
+}
+.header-search input:hover {
+  border-color: #aaa;
+}
+.header-search input:hover+.header-searchicon {
+  border-color: #aaa;
+}
+.header-search input:focus {
+  border-color: #ff6700;
+}
+.header-search input:focus+.header-searchicon {
+  border-color: #ff6700;
+}
+.header-search input:focus~.header-suggest {
+  display: block;
+}
+.header-search .header-searchicon:hover {
+  background-color: #ff6700;
+  border-color: #ff6700;
+  color: #fff;
+}

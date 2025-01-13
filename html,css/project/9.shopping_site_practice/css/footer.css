@@ -1,0 +1,80 @@
+.footer-top {
+  padding: 27px 0;
+  border-bottom: 1px solid #e0e0e0;
+  height: 75px;
+  color: #616161;
+}
+.footer-top a {
+  width: 20%;
+  text-align: center;
+  font-size: 16px;
+  height: 20px;
+  line-height: 20px;
+  border-right: 1px solid #e0e0e0;
+}
+.footer-top a:last-child {
+  border-right: none;
+}
+.footer-top .iconfont {
+  font-size: 26px;
+  vertical-align: -4px;
+}
+.footer-bottom {
+  padding: 40px 0;
+}
+.footer-links {
+  width: 160px;
+  color: #757575;
+}
+.footer-links h3 {
+  font-size: 14px;
+  font-weight: normal;
+  color: #424242;
+  margin-bottom: 17px;
+}
+.footer-links a {
+  display: block;
+  font-size: 12px;
+  margin-top: 10px;
+}
+.footer-contact {
+  width: 245px;
+  text-align: center;
+  border-left: 1px solid #e0e0e0;
+  font-size: 12px;
+}
+.footer-phone {
+  font-size: 22px;
+  color: #ff6700;
+}
+.footer-phone-desc {
+  color: #616161;
+}
+.footer-support {
+  display: inline-block;
+  width: 118px;
+  border: 1px solid #ff6700;
+  color: #ff6700;
+  margin: 6px 0;
+  height: 30px;
+  line-height: 30px;
+}
+.footer-support:hover {
+  background-color: #ff6700;
+  color: #fff;
+}
+.footer-support .iconfont {
+  vertical-align: -1px;
+  font-size: 14px;
+}
+.footer-subscribe {
+  color: #616161;
+}
+.footer-subscribe .iconfont {
+  font-size: 20px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+.footer-subscribe .iconfont:hover {
+  color: #ff6700;
+}
