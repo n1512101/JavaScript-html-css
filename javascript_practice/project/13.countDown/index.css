@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+body {
+  background-color: gray;
+}
+.container {
+  width: 600px;
+  height: 400px;
+  margin: 50px auto 0;
+  border: 1px solid #000;
+  background-image: url(./images/1.jpg);
+}
+.timer-end-text {
+  color: #fff;
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: -30px;
+}
+.wrapper {
+  width: 490px;
+  height: 160px;
+  margin-left: 74px;
+  margin-top: 135px;
+}
+.time-item {
+  width: 65px;
+  height: 120px;
+  float: left;
+  overflow: hidden;
+}
+.time-item ul {
+  position: relative;
+  top: 0;
+  font-size: 0;
+}
+.time-text {
+  color: #fff;
+  line-height: 120px;
+  float: left;
+  font-weight: bold;
+  width: 30px;
+  text-align: center;
+}
