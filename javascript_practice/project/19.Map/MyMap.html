@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script src="MyMap.js"></script>
+    <script>
+      const mp = new MyMap([
+        ["a", 1],
+        ["b", 2],
+        ["c", 3],
+      ]);
+
+      mp.forEach((key, value, m) => {
+        console.log(key, value, m);
+      });
+    </script>
+  </body>
+</html>

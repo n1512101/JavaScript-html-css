@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const obj = { a: 1, b: 2, c: 3 };
+
+      Object.defineProperty(obj, "a", {
+        value: 3,
+        writable: false,
+        enumerable: false,
+        configurable: false,
+      });
+
+      const desc = Object.getOwnPropertyDescriptor(obj, "a");
+      console.log(desc);
+
+      for (let key in obj) {
+        console.log(key);
+      }
+    </script>
+  </body>
+</html>

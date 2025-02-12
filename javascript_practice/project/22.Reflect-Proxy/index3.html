@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class User {}
+
+      // const user2 = Reflect.construct(User, ["Tom", 34]);
+      // console.log(user2);
+
+      function ConstructorProxy(Class, ...propNames) {
+        return new Proxy(Class, {
+          construct(target, argumentsList) {
+            const obj = Reflect.construct(target, argumentsList);
+            propNames.forEach((name, i) => {
+              obj[name] = argumentsList[i];
+            });
+            return obj;
+          },
+        });
+      }
+
+      const UserProxy = ConstructorProxy(User, "name", "age");
+      const user = new UserProxy("jerry", 14);
+      console.log(user);
+    </script>
+  </body>
+</html>

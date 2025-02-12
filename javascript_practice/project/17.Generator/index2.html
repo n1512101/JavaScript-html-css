@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const arr = [1, 2, 3, 4, 5];
+
+      // function createIterator(arr) {
+      //   let i = 0; // インデックス
+      //   return {
+      //     next() {
+      //       const result = {
+      //         value: arr[i],
+      //         done: i >= arr.length,
+      //       };
+      //       i++;
+      //       return result;
+      //     },
+      //   };
+      // }
+
+      // const iterator = createIterator(arr);
+
+      // let data = iterator.next();
+      // while (!data.done) {
+      //   console.log(data.value);
+      //   data = iterator.next();
+      // }
+      // console.log("iterator over.");
+
+      function* createIterator(arr) {
+        for (const item of arr) {
+          yield item;
+        }
+      }
+
+      const iter = createIterator(arr);
+    </script>
+  </body>
+</html>

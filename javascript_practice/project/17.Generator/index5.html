@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function* t1() {
+        yield "a";
+        yield "b";
+      }
+
+      function* test() {
+        yield* t1();
+        yield 1;
+        yield 2;
+      }
+
+      const generator = test();
+      console.log(generator.next());
+      console.log(generator.next());
+      console.log(generator.next());
+      console.log(generator.next());
+      console.log(generator.next());
+    </script>
+  </body>
+</html>

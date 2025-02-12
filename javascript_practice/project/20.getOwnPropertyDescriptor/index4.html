@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>
+      <span>name: </span>
+      <span id="name"></span>
+    </p>
+    <p>
+      <span>age: </span>
+      <span id="age"></span>
+    </p>
+    <script>
+      const spanName = document.getElementById("name");
+      const spanAge = document.getElementById("age");
+
+      const user = {};
+
+      /* spanとuser.name, user.ageを関連させたい */
+      Object.defineProperties(user, {
+        name: {
+          get() {
+            return spanName.innerText;
+          },
+          set(val) {
+            spanName.innerText = val;
+          },
+        },
+        age: {
+          get() {
+            return +spanAge.innerText;
+          },
+          set(val) {
+            spanAge.innerText = val;
+          },
+        },
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const obj = {
+        a: 1,
+        b: 2,
+        c: 3,
+        [Symbol.iterator]() {
+          const keys = Object.keys(this);
+          let i = 0;
+          return {
+            next: () => {
+              const result = {
+                value: {
+                  propName: keys[i],
+                  propValue: this[keys[i]],
+                },
+                done: i >= keys.length,
+              };
+              i++;
+              return result;
+            },
+          };
+        },
+      };
+
+      for (const item of obj) {
+        console.log(item); // {propName: "a", propValue: 1}の形式で出力するようにする
+      }
+    </script>
+  </body>
+</html>

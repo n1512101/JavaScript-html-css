@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const obj = {
+        name: "abc",
+      };
+
+      Object.defineProperty(obj, "age", {
+        get() {
+          return obj._age;
+        },
+        set(val) {
+          if (typeof val !== "number") {
+            throw new TypeError("age must be a number.");
+          }
+          if (val > 100) {
+            val = 100;
+          } else if (val < 0) {
+            val = 0;
+          }
+          obj._age = val;
+        },
+      });
+
+      // obj.age = true;
+      obj.age = -200;
+      console.log(obj.age);
+    </script>
+  </body>
+</html>
